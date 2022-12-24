@@ -1,0 +1,90 @@
+<!--<main>-->
+<!-- <p id="notice"></p>-->
+<!--  <div class="container">-->
+<!--  <div class="row">-->
+<!--    <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">-->
+<!--    <h2>User info</h2>-->
+<!--    <form enctype="multipart/form-data" action="/users/69571" accept-charset="UTF-8" method="post"><input type="hidden" name="_method" value="patch" autocomplete="off"><input type="hidden" name="authenticity_token" value="hI2lXOayny8L180dvCrkwmgY49vq91l6FBzWEEA0Y61XYxOaNBjWFc7vXUTTGkuUhE3aUzkf56erNUzGO9jE9w" autocomplete="off">-->
+
+<!--      <div class="form-group">-->
+<!--        <label for="user_name">Name</label>-->
+<!--        <input class="form-control name" type="text" value="柏　パクチー" name="user[name]" id="user_name">-->
+<!--      </div>-->
+<!--     <div class="form-group">-->
+<!--        <label for="user_image">Image</label>-->
+<!--        <input class="form-control-file user_image" accept="image/*" type="file" name="user[profile_image]" id="user_profile_image">-->
+<!--      </div>-->
+<!--      <div class="form-group">-->
+<!--        <label for="user_introduction">Introduction</label>-->
+<!--        <textarea class="form-control introduction" name="user[introduction]" id="user_introduction"></textarea>-->
+<!--      </div>-->
+<!--      <div class="form-group">-->
+<!--        <input type="submit" name="commit" value="Update User" class="btn btn-secondary" data-disable-with="Update User">-->
+<!--      </div>-->
+<!--    </form>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  </div>-->
+<!--</main>-->
+<main>
+  <p id="notice"></p>
+  <div class="container">
+  <div class="row">
+  <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
+<h2>User info</h2>
+<%= form_with model: @user do |f| %>
+ <div>
+  <label for="inputName">Name</label>
+  </div>
+  <div>
+  <%= f.text_field :name, autofocus: true, id:"inputName", placeholder:"名前"%>
+  </div>
+  <div>
+  <label for="inputImage">Image</label>
+  </div>
+  <div>
+  <%= f.file_field :profile_image, placeholder: "プロフィール画像", accept: "image/*" %>
+  </div>
+  <div>
+  <label for="inputImage">Introduction</label>
+  </div>
+  <div>
+    <%= f.text_field :introduction, autofocus: true, id:"inputIntroduction"%>
+  </div>
+
+  <div>
+  <%= f.submit "Update User" %>
+  </div>
+<% end %>
+</div>
+</div>
+</div>
+</main>
+
+<!--<main>-->
+<!--  <p id="notice"></p>-->
+<!--  <div class="container">-->
+<!--  <div class="row">-->
+<!--    <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">-->
+<!--    <h2>User info</h2>-->
+<!--    <form enctype="multipart/form-data" action="/users/69668" accept-charset="UTF-8" method="post"><input type="hidden" name="_method" value="patch" autocomplete="off"><input type="hidden" name="authenticity_token" value="4KqrNeNSfWl9RoD3RSRNp2qreJu3KgExvaLUvX-HFz7s4bY5_rD4E_82XrkhE-0zrK2Ucc7gUzHBzcyVV3GslA" autocomplete="off">-->
+
+<!--      <div class="form-group">-->
+<!--        <label for="user_name">Name</label>-->
+<!--        <input class="form-control name" type="text" value="柏 パク１" name="user[name]" id="user_name">-->
+<!--      </div>-->
+<!--     <div class="form-group">-->
+<!--        <label for="user_image">Image</label>-->
+<!--        <input class="form-control-file user_image" accept="image/*" type="file" name="user[profile_image]" id="user_profile_image">-->
+<!--      </div>-->
+<!--      <div class="form-group">-->
+<!--        <label for="user_introduction">Introduction</label>-->
+<!--        <textarea class="form-control introduction" name="user[introduction]" id="user_introduction"></textarea>-->
+<!--      </div>-->
+<!--      <div class="form-group">-->
+<!--        <input type="submit" name="commit" value="Update User" class="btn btn-secondary" data-disable-with="Update User">-->
+<!--      </div>-->
+<!--</form>  </div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</main>-->
